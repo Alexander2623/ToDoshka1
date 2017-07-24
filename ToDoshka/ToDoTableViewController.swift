@@ -52,5 +52,6 @@ extension ToDoTableViewController: ToDoDataDisplayManagerDelegate {
   func didSelectTask(indexPath: IndexPath) {
     presenter.didSelectTask(indexPath: indexPath)
     selectedIndexPath = indexPath
+    
   }
 }
