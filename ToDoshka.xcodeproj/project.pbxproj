@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F416FF11F28ECFC0007F2E4 /* TaskServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F416FF01F28ECFC0007F2E4 /* TaskServices.swift */; };
 		1FE4332E1F20FB910062D8ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4332D1F20FB910062D8ED /* AppDelegate.swift */; };
 		1FE433301F20FB910062D8ED /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4332F1F20FB910062D8ED /* ToDoTableViewController.swift */; };
 		1FE433331F20FB910062D8ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE433311F20FB910062D8ED /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F416FF01F28ECFC0007F2E4 /* TaskServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskServices.swift; sourceTree = "<group>"; };
 		1FE4332A1F20FB910062D8ED /* ToDoshka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoshka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE4332D1F20FB910062D8ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FE4332F1F20FB910062D8ED /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F416FEC1F28EC2D0007F2E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4332D1F20FB910062D8ED /* AppDelegate.swift */,
+				1FE433391F20FB910062D8ED /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		1F416FED1F28EC4A0007F2E4 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1F416FEE1F28EC620007F2E4 /* Services */,
+				1F416FEF1F28EC770007F2E4 /* Repositories */,
+				1FE4334A1F21495D0062D8ED /* Entities */,
+			);
+			name = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		1F416FEE1F28EC620007F2E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F416FF01F28ECFC0007F2E4 /* TaskServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		1F416FEF1F28EC770007F2E4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1FE433581F220EE60062D8ED /* TaskRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		1F416FF21F28ED170007F2E4 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1F416FF31F28ED2E0007F2E4 /* UserStories */,
+			);
+			name = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		1F416FF31F28ED2E0007F2E4 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				1F416FF41F28ED3A0007F2E4 /* Todos */,
+			);
+			name = UserStories;
+			sourceTree = "<group>";
+		};
+		1F416FF41F28ED3A0007F2E4 /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				1F416FF51F28ED430007F2E4 /* Modules */,
+			);
+			name = Todos;
+			sourceTree = "<group>";
+		};
+		1F416FF51F28ED430007F2E4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4334D1F21525B0062D8ED /* AddViewController */,
+				1FE4333F1F2139E30062D8ED /* ToDoTableViewController */,
+				1FE433311F20FB910062D8ED /* Main.storyboard */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		1F416FF61F28ED9A0007F2E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FE433341F20FB910062D8ED /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		1FE433211F20FB910062D8ED = {
 			isa = PBXGroup;
 			children = (
@@ -76,14 +155,11 @@
 		1FE4332C1F20FB910062D8ED /* ToDoshka */ = {
 			isa = PBXGroup;
 			children = (
-				1FE4333F1F2139E30062D8ED /* ToDoTableViewController */,
-				1FE4334D1F21525B0062D8ED /* AddViewController */,
-				1FE4334A1F21495D0062D8ED /* Entities */,
-				1FE433561F21F22A0062D8ED /* Other */,
-				1FE433571F21F2530062D8ED /* Storyboard */,
-				1FE433341F20FB910062D8ED /* Assets.xcassets */,
-				1FE4332D1F20FB910062D8ED /* AppDelegate.swift */,
-				1FE433391F20FB910062D8ED /* Info.plist */,
+				1F416FEC1F28EC2D0007F2E4 /* App */,
+				1F416FED1F28EC4A0007F2E4 /* BusinessLogicLayer */,
+				1F416FF21F28ED170007F2E4 /* PresentationLayer */,
+				1FE433561F21F22A0062D8ED /* VIPER */,
+				1F416FF61F28ED9A0007F2E4 /* Resources */,
 			);
 			path = ToDoshka;
 			sourceTree = "<group>";
@@ -120,21 +196,12 @@
 			name = AddViewController;
 			sourceTree = "<group>";
 		};
-		1FE433561F21F22A0062D8ED /* Other */ = {
+		1FE433561F21F22A0062D8ED /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				1FE433581F220EE60062D8ED /* TaskRepository.swift */,
 				1FE433541F21F21E0062D8ED /* ViewRouter.swift */,
 			);
-			name = Other;
-			sourceTree = "<group>";
-		};
-		1FE433571F21F2530062D8ED /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				1FE433311F20FB910062D8ED /* Main.storyboard */,
-			);
-			name = Storyboard;
+			name = VIPER;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +283,7 @@
 				1FE433511F21DC830062D8ED /* AddViewRouter.swift in Sources */,
 				1FE4334C1F2152560062D8ED /* AddTableViewController.swift in Sources */,
 				1FE433531F21DC940062D8ED /* AddViewConfigurator.swift in Sources */,
+				1F416FF11F28ECFC0007F2E4 /* TaskServices.swift in Sources */,
 				1FE433471F21435C0062D8ED /* ToDoDataDisplayManager.swift in Sources */,
 				1FE433411F213A5C0062D8ED /* ToDoPresenter.swift in Sources */,
 				1FE433591F220EE60062D8ED /* TaskRepository.swift in Sources */,

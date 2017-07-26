@@ -13,6 +13,10 @@ protocol ToDoConfigurator {
 
 class ToDoConfiguratorImplamentation: ToDoConfigurator {
   func configure(toDoTableViewController: ToDoTableViewController) {
+    let displayManager = ToDoDataDisplayManager(tableView: toDoTableViewController.tableView)
+    displayManager.delegate = toDoTableViewController
+    toDoTableViewController.displayManager = displayManager
+
     let router = ToDoRouterImplamentation(toDoTableViewContriller: toDoTableViewController)
     let presenter = ToDoPresenterImplamentation(router: router)
     toDoTableViewController.presenter = presenter

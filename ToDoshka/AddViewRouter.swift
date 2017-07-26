@@ -19,13 +19,13 @@ class AddViewRouterImplamemtation: AddViewRouter {
     self.addTableViewController = addTableViewController
   }
 
-  var task = Task1(name: "", description: "")
+  var task = Task(name: "", description: "")
 
   func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let toDoTableViewController = segue.destination as? ToDoTableViewController
     if task.name != "" || task.description != "" {
       if TaskRepository.sharedInstance.addButtonFlag {
-        toDoTableViewController!.taskList.append(Task1(name: task.name, description: task.description))
+        toDoTableViewController!.taskList.append(Task(name: task.name, description: task.description))
       } else {
         toDoTableViewController!.didEditTask(task)
       }

@@ -16,7 +16,7 @@ class AddTableViewController: UITableViewController {
   //var configurator: AddViewConfigurator = AddViewConfiguratorImplamemtation()
   var configurator: AddViewConfiguratorImplamemtation!
   var displayManager = AddDataDisplayManager()
-  var task: Task1 = Task1(name: "", description: "")
+  var task: Task = Task(name: "", description: "")
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -71,7 +71,7 @@ class AddTableViewController: UITableViewController {
   func cancelButton() {
     navigationController?.popViewController(animated: true)
   }
-  func configureWithTask(_ task: Task1) {
+  func configureWithTask(_ task: Task) {
   self.task = task
   }
 }
@@ -81,11 +81,11 @@ extension AddTableViewController: UITextViewDelegate {
       presenter.textViewDidChange(text: unwrappedText)
     }
   }
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cellName", for: indexPath)
-    
-    return cell
-  }
+//  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "cellName", for: indexPath)
+//    
+//    return cell
+//  }
 }
 
 //extension AddTableViewController: AddDataDisplayManagerDelegate {

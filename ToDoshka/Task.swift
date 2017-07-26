@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Task1 {
+class Task {
   var name = ""
   var description = ""
   init(name: String, description: String) {

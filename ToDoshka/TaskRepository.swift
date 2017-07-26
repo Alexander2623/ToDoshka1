@@ -11,11 +11,19 @@ import UIKit
 class TaskRepository {
   
   static let sharedInstance = TaskRepository()
-  
-  var addButtonFlag = true
-//  var masOfTask = [Task1]()
-//  
-//  func addTask(_ task:Task1) {
-//    masOfTask.append(task)
-//  }
+
+    var addButtonFlag = true
+    var masOfTask = [Task]()
+    
+    func addTask(_ task: Task) {
+        masOfTask.append(task)
+    }
+    
+    func editTask(_ task: Task) {
+        masOfTask.append(task)
+    }
+    
+    func removeTask(_ task: Task) {
+        masOfTask.append(task)
+    }
 }

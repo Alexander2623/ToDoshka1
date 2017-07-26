@@ -37,7 +37,7 @@ class ToDoRouterImplamentation: ToDoRouter {
       addTableViewController!.configurator = AddViewConfiguratorImplamemtation()
       addTableViewController!.configurator.configure(addTableViewController: addTableViewController!)
       addTableViewController!.createButtonAddTableView(value: TaskRepository.sharedInstance.addButtonFlag)
-      if let task = sender as? Task1 {
+      if let task = sender as? Task {
         addTableViewController!.configureWithTask(task)
       }
     }
